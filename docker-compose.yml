@@ -10,7 +10,6 @@ services:
       - "49161:3000"
     volumes:
       - .:/app/
-      - /app/node_modules
       - ./upload:/app/upload
       - ./uploads:/app/uploads
     environment:
@@ -28,6 +27,7 @@ services:
     image: mongo:3.6
     volumes:
       - ./data/db:/data/db
+      - ./data/configdb:/data/configdb
     ports:
       - "27011:27017"
     networks:
@@ -36,6 +36,8 @@ services:
   redis:
     container_name: nodetube-redis
     image: redis
+    volumes:
+      - ./data/redis:/data
     networks:
       - nodetube-network
 
