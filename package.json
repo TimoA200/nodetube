@@ -2,10 +2,7 @@
   "name": "NodeTube",
   "version": "1.0.0",
   "description": "Video, audio and image hosting",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mayeuax/nodetube"
-  },
+  "repository": "https://github.com/mayeuax/nodetube",
   "engines": {
     "node": "^8 || ^10"
   },
@@ -153,5 +150,6 @@
     "plugins": [
       "chai-friendly"
     ]
-  }
+  },
+  "main": "index.js"
 }
